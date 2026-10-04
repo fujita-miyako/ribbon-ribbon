@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>商品の出品</title>
+</head>
+
+<body class="salegoods_page">
+    <img src="ribbonribbon/static/menu/image/Rogo.png" alt="Rogo_Image" class="Rogo_Image">
+    <h1>出品登録</h1>
+    <div class="form-container">
+        <div class="form-items">
+            <div class="form-items-item">
+                <label>出品画像</label>
+                <input type="file" accept="image/*" />
+            </div>
+        </div>
+        <div class="form-items-item">
+            <label>出品グッズ名</label>
+            <input type="text" />
+        </div>
+        <div class="form-items-item">
+            <label>出品の詳細</label>
+            <textarea></textarea>
+        </div>
+        <div class="form-items-item">
+            <label>グッズの状態</label>
+            <select name="condition">
+                <option value="新品・未使用">新品・未使用</option>
+                <option value="未使用に近い">未使用に近い</option>
+                <option value="目立った傷や汚れなし">目立った傷や汚れなし</option>
+                <option value="やや傷や汚れあり">やや傷や汚れあり</option>
+                <option value="傷や汚れあり">傷や汚れあり</option>
+                <option value="全体的に状態が悪い">全体的に状態が悪い</option>
+                <option value="選択して下さい" selected>選択して下さい</option>
+            </select>
+        </div>
+        <div class="form-items-item">
+            <label>梱包方法</label>
+            <textarea></textarea>
+        </div>
+        <div class="form-items-item">
+            <label>ご希望のお取引</label>
+            <select id="wayToTrade" name="waytotrade">
+                <option value="thank.html">買取</option>
+                <option value="hopegoods.html">交換</option>
+            </select>
+        </div>
+        <div class="form-action">
+            <a href="#" class="button-link" onclick="navigatePage()">送信</a>
+        </div>
+    </div>
+
+    <script>
+        function navigatePage() {
+            const select = document.getElementById('wayToTrade');
+            const selectedPage = select.value;
+            window.location.href = selectedPage;
+        }
+    </script>
+</body>
+</html>

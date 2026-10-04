@@ -1,0 +1,664 @@
+@font-face {
+    font-family: 'Cinecaption';
+    src: url('/static/menu/fonts/cinecaption.2.26/cinecaption2.26/cinecaption226.ttf') format('truetype');
+}
+
+/* 全体画面 */
+body {
+    background-color: #fff0f5;
+    font-family: 'Cinecaption', sans-serif; /* フォントを適用 */
+}
+
+h1 {
+    color: #000000;
+    font-size: 18px;
+    font-family: 'Cinecaption', sans-serif;
+}
+
+h2 {
+    color: #000000;
+    font-size: 18px;
+    font-family: 'Cinecaption', sans-serif; /* フォントを適用 */
+}
+
+p {
+    font-size: 18px;
+    font-family: 'Cinecaption', sans-serif; /* フォントを適用 */
+}
+
+.menu-return-image {
+    position: absolute; /* 固定位置 */
+    top: 10px; /* 画面上部からの距離 */
+    left: 10px; /* 画面左端からの距離 */
+    width: 200px; /* 幅を固定 */
+    object-fit: contain; /* 比率を保つ */
+    z-index: 1000; /* 他の要素より前に表示 */
+}
+
+
+
+/* メニュー画面 */
+
+.menu_screan {
+    text-align: center;       /* 中央揃え */
+    display: flex;
+    flex-direction: column;   /* 縦並びにする */
+    align-items: center;      /* 中央揃え */
+    gap: 0px;                /* 各要素の間隔 */
+}
+
+/* 画像デザイン */
+.Rogo_Image {
+    width: 200px;             /* 画像サイズを調整 */
+    transition: transform 0.3s ease;
+}
+
+.Rogo_Image:hover {
+    transform: scale(1.1);    /* ホバー時に拡大 */
+}
+
+/* ログアウトボタンのデザイン */
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .Rogo_Image {
+        width: 150px;
+    }
+
+    .button-link {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+.Sale_Image {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+/* アカウント登録画面 */
+/* ログイン画面 */
+/* ログイン画面 */
+
+.login-button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f8d8e6;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: 'Cinecaption', sans-serif;
+    text-align: center;
+}
+
+.login-button-link:hover {
+    background-color: #e6b8c5;
+}
+
+.account_page h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.fsize {
+    font-size: 24px;
+    text-align: center;
+}
+
+.container {
+    width: 250px; /* 横幅を調整 */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.account_page input[type="text"] {
+    width: 90%; /* 入力欄の横幅を調整 */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Cinecaption', sans-serif;
+}
+
+.mail {
+    font-size: 15px;
+}
+
+.button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Cinecaption', sans-serif;
+}
+
+.button[type="submit"]:hover {
+    background-color: #f8d8e6;
+}
+
+.button-container {
+    text-align: right;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f8d8e6;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: 'Cinecaption', sans-serif;
+    text-align: center;
+}
+
+
+
+.button-link:hover {
+    background-color: #e6b8c5;
+}
+
+
+/* プロフィール画面 */
+.profile-container {
+    margin: 0;
+    padding: 0;
+    background-color: #fff0f5;
+    text-align: center;
+    padding: 20px;
+}
+
+.ribbon-icon {
+    width: 50px;
+}
+
+.header-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.profile-form {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.profile-icon img {
+    width: 250px;
+    height: auto;
+    border-radius: 0%;
+}
+
+.profile-gazou {
+    display: flex;
+    justify-content: left;
+    gap: 40px;
+}
+
+.profile-item {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.form-fields {
+    text-align: left;
+}
+
+.required-note {
+    color: #d9534f;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.button-container {
+    text-align: right; /* 右寄せ配置 */
+    margin-bottom: 20px;
+}
+
+.complete-button {
+    padding: 10px 20px;
+    background-color: #f8d8e6;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Cinecaption', sans-serif;
+}
+
+.complete-button:hover {
+    background-color: #ffffff;
+}
+
+.label {
+    color: #fff;
+    background-color: #d9534f;
+    padding: 4px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+        padding: 8px;
+        margin-left: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+.logo img {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: auto;
+    order: 0;
+    margin: 0 auto;
+}
+
+
+/* 出品画面 */
+.salegoods_Rogo{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+.salegoods_page{
+    margin: 0;
+    padding: 0;
+    font-family: Cinecaption, sans-serif;
+    background-color: #fff0f5; /* Light pink background */
+}
+
+.salegoods_page h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333333; /* Dark text */
+}
+
+.form-container {
+    width: 450px; /* 横幅を調整 */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.form-items {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.form-items-item {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.form-items-item label {
+    width: 30%;
+    margin-right: 10px;
+    color: black;
+    font-weight: bold; /* Bold label */
+    text-align: right; /* Right-align label text */
+}
+
+.form-items-item input,
+.form-items-item textarea {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.salegoods_formaction {
+    padding: 10px 50px;
+    align-items: right;
+    background-color: #fff0f5;
+    color: #000000;
+    font-family: 'Cinecaption', sans-serif; /* Apply font */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.salegoods_formaction:hover {
+    background-color: #e6b8c5;
+}
+
+.form-action {
+    text-align: right;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-action button[type="submit"]{
+    padding: 10px 50px;
+    align-items: right;
+    background-color: #fff0f5;
+    color: #000000;
+    font-family: 'Cinecaption', sans-serif; /* Apply font */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-action input[type="submit"] {
+    padding: 10px 50px;
+    align-items: right;
+    background-color: #fff0f5;
+    color: #000000;
+    font-family: 'Cinecaption', sans-serif; /* Apply font */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    /* Image selection button */
+input[type="file"] {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+    /* Tag addition button */
+.tag-button {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid #333;
+    background-color: #fff0f5;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    /* Footer */
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.footer img {
+    width: 50px;
+    height: auto;
+}
+
+.footer p {
+    margin: 5px 0 0;
+}
+
+
+
+/* 検索バーのデザイン */
+
+.search-history {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.search-history p {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.Rogo_Image2 {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+}
+
+
+
+
+/* 検索・一覧画面 */
+.product-grid {
+    display: flex; /* フレックスボックスで横並び */
+    flex-wrap: wrap; /* 改行して表示 */
+    justify-content: space-evenly; /* 均等配置 */
+    gap: 20px; /* カード間の間隔 */
+    margin: 20px 10px; /* 全体の余白 */
+}
+
+.product-item {
+    width: 240px; /* カードの幅 */
+    padding: 15px; /* 内側の余白 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* 中央揃え */
+    background-color: #fff;
+    border-radius: 8px; /* 角を少し丸く */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* カードに影を追加 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* アニメーション効果 */
+}
+
+.product-item:hover {
+    transform: translateY(-5px); /* 少し浮き上がる効果 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* ホバー時に影を濃く */
+}
+
+.product-item img {
+    width: 100%; /* 幅をカードに合わせる */
+    height: auto; /* 高さを自動調整 */
+    object-fit: cover; /* 画像が適切に収まるようにする */
+    border-radius: 4px; /* 画像の角を丸く */
+    margin-bottom: 10px; /* 下部に余白 */
+}
+
+.product-info {
+    width: 100%; /* カード全体を使用 */
+    text-align: left; /* テキストを左揃え */
+    margin: 0 auto; /* 全体を中央配置 */
+}
+
+.product-name a {
+    font-size: 16px; /* 少し小さめに調整 */
+    color: #333; /* 濃いグレー */
+    text-decoration: none;
+    font-weight: bold;
+    display: block; /* ブロック表示 */
+    margin-bottom: 5px; /* 下部余白 */
+}
+.product-name a:hover {
+    color: #e6b8c5; /* ホバー時のアクセントカラー */
+}
+
+.product-condition, .product-quantity {
+    font-size: 14px; /* フォントサイズを統一 */
+    color: #666;
+    margin: 5px 0;
+}
+
+.no-products {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin: 20px;
+}
+
+
+.search_logo img {
+    width: 200px;
+    height: auto;
+    display: block; /* ブロック要素として扱う */
+    margin: 0 auto 10px; /* 中央揃え + 検索バーとの間隔 */
+}
+
+.search_bar h4 {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.card {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px; /* 最大幅を設定 */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group .form-control {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.search_form.button {
+    padding: 10px 20px;
+    background-color: #f8d8e6;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search_form.button:hover {
+    background-color: #e6b8c5;
+}
+
+
+
+/* 商品詳細画面 */
+
+.product-detail-container {
+    max-width: 768px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-image img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+
+.product-info2 {
+    padding: 10px 15px; /* 内側の余白を設定 */
+    text-align: left; /* テキストを左揃え */
+    margin: 0 auto; /* 全体を中央配置 */
+    max-width: 600px; /* 幅を設定 */
+    border: 1px solid #ccc; /* 灰色の枠線 */
+    border-radius: 5px; /* 角を少し丸くする */
+    background-color: #f9f9f9; /* 背景色を薄い灰色に設定（オプション） */
+}
+
+.product-info2 h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-info2 p {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.product-info2 strong {
+    font-weight: bold;
+}
+
+.product-action {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #000;
+    background-color: #f8d8e6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button-link:hover {
+    background-color: #e6b8c5;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .product-detail-container {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .product-info2 h2 {
+        font-size: 18px;
+    }
+
+    .product-info2 p {
+        font-size: 13px;
+    }
+
+    .button-link {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+

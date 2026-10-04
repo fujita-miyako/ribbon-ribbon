@@ -1,0 +1,46 @@
+{% extends "base/ribbonribbon_base.html" %}
+{% load static %}
+{% block body %}
+
+<div class="menu_return">
+    <br>
+    <a href="{% url 'menu:page_list' %}">
+        <img src="{% static 'menu/image/search.png' %}" alt="Menu_return_Image" class="menu-return-image">
+    </a>
+</div>
+
+<div class="product-detail-container">
+
+    <!-- 商品画像 -->
+    <div class="product-image">
+        {% if page.picture %}
+            <img src="{{ page.picture.url }}" alt="{{ page.name }}">
+        {% else %}
+            <img src="{% static 'default-placeholder.png' %}" alt="No image available">
+        {% endif %}
+    </div>
+
+    <!-- 商品情報 -->
+    <div class="product-info2">
+        <h2 class="product-name">{{ page.name }}</h2>
+        <p class="product-condition"><strong>状態:</strong> {{ page.get_condition_display }}</p>
+        <p class="product-quantity"><strong>個数:</strong> {{ page.quantity }}</p>
+        <p class="product-description"><strong>説明:</strong> {{ page.description }}</p>
+        <p class="product-packaging"><strong>梱包方法:</strong> {{ page.packaging_method }}</p>
+        <p class="product-quantity"><strong>希望グッズ名:</strong> {{ page.wanted_item_name }}</p>
+        <p class="product-quantity"><strong>希望グッズの詳細:</strong> {{ page.wanted_item_details }}</p>
+        <p class="product-quantity"><strong>値段:</strong> {{ page.price }}</p>
+        <p class="product-created"><strong>出品日時:</strong> {{ page.created_at|date:"Y年m月d日 H:i" }}</p>
+        <p class="product-updated"><strong>更新日時:</strong> {{ page.updated_at|date:"Y年m月d日 H:i" }}</p>
+    </div>
+
+    <!-- 購入ボタン -->
+    <div class="product-action">
+        <button class="button-link">交渉する</button>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

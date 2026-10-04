@@ -1,0 +1,24 @@
+{% extends "base/ribbonribbon_base.html"%}
+{% load static %}
+{% block body %}
+
+<div class="menu_return">
+    <br>
+    <a href="{% url 'menu:index' %}">
+        <img src="{% static 'menu/image/menu_return.png' %}" alt="Menu_return_Image" class="menu-return-image">
+    </a>
+</div>
+
+<img src="{% static 'menu/image/Rogo.png' %}" alt="salegoods_Rogo" class="salegoods_Rogo">
+<div class="salegoods_page">
+    <h1>出品登録</h1>
+    <div class="form-container">
+    <form method="POST" enctype= "multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class= "button-link">送信</button>
+    </form>
+    </div>
+</div>
+
+{% endblock %}

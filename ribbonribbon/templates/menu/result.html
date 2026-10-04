@@ -1,0 +1,59 @@
+{% extends "base/ribbonribbon_base.html" %}
+{% load static %}
+{% block body %}
+
+<div class="menu_return">
+    <br>
+    <a href="{% url 'menu:index' %}">
+        <img src="{% static 'menu/image/menu_return.png' %}" alt="Menu_return_Image" class="menu-return-image">
+    </a>
+</div>
+
+<div class="search_logo">
+    <img src="{% static 'menu/image/Rogo.png' %}"
+    alt="search_logo" class="search_logo">
+</div>
+
+<div class="search_bar">
+    {% if keyword %}
+        <h4 class="nb-4">「{{ keyword }}の検索結果」</h4>
+    {% endif %}
+</div>
+
+<div class="card ny-4">
+    <h5 class="card-header">検索</h5>
+    <div class="card-body">
+        <form method="get" action="{% url 'menu:search' %}" class="input-group">
+            <input type="text" name="keyword" class="form-control" placeholder="グッズを検索">
+            <button class="search_form button" type="submit">検索</button>
+        </form>
+    </div>
+</div>
+
+<div class="product-grid">
+    {% for page in page_list %}
+    <div class="product-item">
+        <!-- 商品画像 -->
+        {% if page.picture %}
+        <img src="{{ page.picture.url }}" alt="{{ page.name }}" class="product-image">
+        {% else %}
+        <img src="{% static 'menu/image/default-placeholder.png' %}" alt="No Image" class="product-image">
+        {% endif %}
+
+        <!-- 商品情報 -->
+        <div class="product-info">
+            <h3 class="product-name">
+                <a href="{% url 'menu:page_detail' page.id %}">{{ page.name }}</a>
+            </h3>
+            <p class="product-condition"><strong>状態:</strong> {{ page.get_condition_display }}</p>
+            <p class="product-quantity"><strong>個数:</strong> {{ page.quantity }}</p>
+            <p class="product-quantity"><strong>希望グッズ名:</strong> {{ page.wanted_item_name }}</p>
+            <p class="product-quantity"><strong>値段:</strong> {{ page.price }}</p>
+        </div>
+    </div>
+    {% empty %}
+    <div class="no-products">出品商品が1つもありません。</div>
+    {% endfor %}
+</div>
+
+{% endblock %}

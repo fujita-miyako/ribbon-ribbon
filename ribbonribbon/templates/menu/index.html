@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Ribbon_Ribbon</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'menu/css/base.css' %}">
+</head>
+<body>
+<div class="menu_screan">
+    <img src="{% static 'menu/image/Rogo.png' %}" alt="Rogo_Image" class="Rogo_Image">
+
+    <br>
+    <a href="{% url 'menu:page_create' %}">
+        <img src="{% static 'menu/image/sale.png' %}" alt="Sale_Image" class="Rogo_Image">
+    </a>
+    <br>
+    <a href="{% url 'menu:page_list' %}">
+        <img src="{% static 'menu/image/change.png' %}" alt="Change_Image" class="Rogo_Image">
+    </a>
+    <br>
+    <form action="{% url 'account:logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="button-link">ログアウト</button>
+    </form>
+</div>
+
+</body>
+</html>

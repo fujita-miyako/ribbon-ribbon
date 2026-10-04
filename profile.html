@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>プロフィール登録</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="logo">
+            <img src="ribbonribbon/static/menu/image/Rogo.png" alt="Ribbon Logo" class="Rogo_Image">
+        </div>
+        <div class="profile-form">
+            <div class="profile-icon">
+                <img src="ribbonribbon/static/menu/image/profileset.png" alt="Profile Icon" class="Rogo_Image">
+            <div class="profile-item">
+                    <label>アイコン画像</label>
+                    <input type="file" accept="image/*" />
+        </div>
+            <div class="form-fields">
+                <p class="required-note">※必須の箇所は必ずご入力ください</p>
+                <div class="form-group">
+                    <span class="label required">必須</span>
+                    <label for="last-name">氏名</label>
+                    <input type="text" id="last-name" placeholder="佐藤">
+                    <input type="text" id="first-name" placeholder="花子">
+                </div>
+                <div class="form-group">
+                    <span class="label required">必須</span>
+                    <label for="kana">カナ</label>
+                    <input type="text" id="kana-last" placeholder="サトウ">
+                    <input type="text" id="kana-first" placeholder="ハナコ">
+                </div>
+
+                <div class="form-group">
+                    <span class="label required">必須</span>
+                    <label for="display-name">表示名</label>
+                    <input type="text" id="display-name" placeholder="りぼん">
+                </div>
+
+                <div class="form-group">
+                    <span class="label required">必須</span>
+                    <label for="email">メールアドレス</label>
+                    <input type="email" id="email" placeholder="mmmmm@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="birthday">誕生日</label>
+                    <input type="text" id="year" placeholder="年">
+                    <input type="text" id="month" placeholder="月">
+                    <input type="text" id="day" placeholder="日">
+                </div>
+                <div class="button-container">
+                    <a href="topic.html" class="button-link">完了</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
