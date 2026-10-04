@@ -26,7 +26,7 @@ urlpatterns = [
     path('menu/', include('menu.urls')),
     path('account/', include('account.urls')),
     path('', include('django.contrib.auth.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
 
 
 #path('search/', include('search.urls'))
