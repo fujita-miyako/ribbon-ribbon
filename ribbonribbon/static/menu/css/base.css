@@ -118,12 +118,28 @@ p {
     border-radius: 5px;
 }
 
-.account_page input[type="text"] {
-    width: 90%; /* 入力欄の横幅を調整 */
+.account_page form p {
+    margin: 0 0 16px;
+}
+
+/* ラベルは入力欄の上に置く（インラインのままだと折り返し時に入力欄とかぶる） */
+.account_page label {
+    display: block;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+/* ユーザー名・パスワードの入力欄をそろえる */
+.account_page input[type="text"],
+.account_page input[type="password"] {
+    display: block;
+    width: 100%; /* 入力欄の横幅を調整 */
+    box-sizing: border-box;
+    margin: 0;
     padding: 10px;
-    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 14px;
     font-family: 'Cinecaption', sans-serif;
 }
 
