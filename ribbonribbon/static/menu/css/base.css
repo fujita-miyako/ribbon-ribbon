@@ -443,7 +443,7 @@ input[type="file"] {
     flex-wrap: wrap; /* 改行して表示 */
     justify-content: space-evenly; /* 均等配置 */
     gap: 20px; /* カード間の間隔 */
-    margin: 20px 10px; /* 全体の余白 */
+    margin: 16px 10px 20px; /* 全体の余白 */
 }
 
 .product-item {
@@ -511,14 +511,30 @@ input[type="file"] {
     margin: 0 auto 10px; /* 中央揃え + 検索バーとの間隔 */
 }
 
+/* 一覧・検索画面のロゴ（ログイン画面の .search_logo とは分ける） */
+/* Rogo.png は上下に背景色の余白が多いため、リボンと文字の部分だけを表示する */
+.list_logo img {
+    height: 104px;
+    object-fit: cover;
+    object-position: 50% 54%;
+    margin: 0 auto 16px;
+}
+
+/* 幅が狭いと「メニューへ」ボタンとロゴが横に重なるため、ボタンの下に置く */
+@media (max-width: 640px) {
+    .list_logo img {
+        margin-top: 68px;
+    }
+}
+
 .search_bar h4 {
     font-size: 18px;
     color: #444;
-    margin-bottom: 10px;
+    margin: 0 0 10px;
 }
 
 .card {
-    margin: 20px auto;
+    margin: 0 auto;
     width: 90%;
     max-width: 400px; /* 最大幅を設定 */
     background-color: #fff;
@@ -533,6 +549,7 @@ input[type="file"] {
     border-bottom: 1px solid #ddd;
     padding: 10px 15px;
     text-align: center;
+    margin: 0; /* h5 の標準余白を消す */
 }
 
 .card-body {
